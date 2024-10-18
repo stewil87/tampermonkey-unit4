@@ -48,6 +48,13 @@ export class Global extends AbstractModule {
       document.body.classList.remove("fixedDialog");
     }
 
+    // experimental: beautify
+    if (config.experimentalBeautify()) {
+      document.body.classList.add("experimentalBeautify");
+    } else {
+      document.body.classList.remove("experimentalBeautify");
+    }
+
     // add some CSS classes based on configuration
     if (config.alwaysShowDescriptions()) document.body.classList.add("alwaysShowDescription");
     if (config.alwaysShowActivity()) document.body.classList.add("alwaysShowActivity");

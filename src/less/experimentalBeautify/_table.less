@@ -1,0 +1,23 @@
+body.experimentalBeautify {
+    table.DataListBlue{
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+        tbody tr {
+            border-bottom: 1px solid var(--secondary);
+
+            tr.SumItem td.GridCell {
+                color: var(--white);
+                background-color: var(--dark) !important;
+            }
+        }
+        
+        tbody tr:last-of-type {
+            border-bottom: 2px solid var(--yellow);
+        }
+    }
+    
+    table.Excel *[data-type="cell-activity"] {
+        width: 80px !important;
+    }
+}

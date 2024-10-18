@@ -83,6 +83,12 @@ export class Configuration {
             type: 'checkbox',
             default: false
           },
+          experimentalBeautify: {
+            label: '[Base]: Beautify the UI<copy>Make the UI more beautiful</copy>',
+            labelPos: 'right',
+            type: 'checkbox',
+            default: false
+          },
         },
         css: 'copy { display: block; margin-left: 40px; font-weight: normal }'
       });
@@ -139,6 +145,10 @@ export class Configuration {
 
   experimentalJsonImport() {
     return GM_config.get('experimentalJsonImport');
+  }
+
+  experimentalBeautify() {
+    return GM_config.get('experimentalBeautify');
   }
 
   show() {
